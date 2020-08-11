@@ -1,5 +1,7 @@
 package com.lamtech.luma.stepDefinition;
 
+import com.lamtech.luma.pageObject.HomePagePO;
+import com.lamtech.luma.pageObject.LoginPagePO;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -27,24 +29,34 @@ public class AccountLoginRegisteredCustomerSteps {
         driver.manage().window().maximize();
 
         //Click Sign in link
-        driver.findElement(By.linkText("Sign In")).click();
+        //driver.findElement(By.linkText("Sign In")).click();
+        HomePagePO homePagePO = new HomePagePO(driver);
+        homePagePO.clickSignIn();
+
+
     }
 
     @When("^user enter \"([^\"]*)\"$")
     public void userEnter(String Email) throws Throwable {
-        driver.findElement(By.id("email")).sendKeys(Email);
+        //driver.findElement(By.id("email")).sendKeys(Email);
+        LoginPagePO loginPagePO = new LoginPagePO(driver);
+        loginPagePO.enterEmail(Email);
 
     }
 
     @And("^user also enter \"([^\"]*)\"$")
     public void userAlsoEnter(String Password) throws Throwable {
-        driver.findElement(By.id("pass")).sendKeys(Password);
+        //driver.findElement(By.id("pass")).sendKeys(Password);
+        LoginPagePO loginPagePO = new LoginPagePO(driver);
+        loginPagePO.enterPassword(Password);
 
     }
 
     @And("^user click Sign in$")
     public void userClickSignIn() {
-        driver.findElement(By.cssSelector("#send2 > span")).click();
+        //driver.findElement(By.cssSelector("#send2 > span")).click();
+        LoginPagePO loginPagePO = new LoginPagePO(driver);
+        loginPagePO.clickSignIn();
 
     }
 
