@@ -9,7 +9,7 @@ public class CreateAccountPagePO {
 
     //Element Locator
     @FindBy(id = "firstname")
-    //Declare WebElement Create Account
+    //Declare WebElement FirstName
     public static WebElement FirstNameField;
 
     @FindBy(id = "lastname")
