@@ -11,6 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CreateAccountSteps {
     WebDriver driver;
@@ -18,18 +19,23 @@ public class CreateAccountSteps {
     public void userIsOnCreateAccountPage() {
         //Define Browser
         WebDriverManager.chromedriver().setup();
+        //WebDriverManager.firefoxdriver().setup();
 
         //Define WebDriver to use chrome browser
         driver = new ChromeDriver();
 
+        //Define WebDriver to use FireFox brower
+        //driver = new FirefoxDriver();
+
         //Launch Luma e-commerce website
-        driver.get("http://demo-acm-2.bird.eu/");
+        driver.get("http://demo-magento2.vuestorefront.io/");
 
         //Maximize browser window
         driver.manage().window().maximize();
 
         //Click Create An Account link
         //driver.findElement(By.linkText("Create an Account")).click();
+        //Create instance of a class
         HomePagePO homePagePO = new HomePagePO(driver);
         homePagePO.clickCreateAccount();
 
@@ -38,6 +44,10 @@ public class CreateAccountSteps {
     @When("^user enters \"([^\"]*)\"$")
     public void userEnters(String FirstName) throws Throwable {
         //driver.findElement(By.id("firstname")).sendKeys(FirstName);
+
+        //Thread.sleep
+        //Thread.sleep(10000);
+
         CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
         createAccountPagePO.enterFirstName(FirstName);
 

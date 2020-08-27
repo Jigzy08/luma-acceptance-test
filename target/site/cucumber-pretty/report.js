@@ -119,7 +119,7 @@ formatter.match({
   "location": "AccountLoginRegisteredCustomerSteps.userIsOnTheSignInPage()"
 });
 formatter.result({
-  "duration": 14222514800,
+  "duration": 7840684300,
   "status": "passed"
 });
 formatter.match({
@@ -132,7 +132,7 @@ formatter.match({
   "location": "AccountLoginRegisteredCustomerSteps.userEnter(String)"
 });
 formatter.result({
-  "duration": 373082400,
+  "duration": 163829300,
   "status": "passed"
 });
 formatter.match({
@@ -145,21 +145,21 @@ formatter.match({
   "location": "AccountLoginRegisteredCustomerSteps.userAlsoEnter(String)"
 });
 formatter.result({
-  "duration": 132610099,
+  "duration": 84713800,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountLoginRegisteredCustomerSteps.userClickSignIn()"
 });
 formatter.result({
-  "duration": 4767645299,
+  "duration": 468748000,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountLoginRegisteredCustomerSteps.myDashboardScreenShouldDisplay()"
 });
 formatter.result({
-  "duration": 40701,
+  "duration": 160200,
   "status": "passed"
 });
 });

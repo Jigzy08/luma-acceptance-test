@@ -11,6 +11,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import sun.rmi.runtime.Log;
+
+import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 public class AccountLoginRegisteredCustomerSteps {
     WebDriver driver;
@@ -19,14 +24,21 @@ public class AccountLoginRegisteredCustomerSteps {
         //Define Browser
         WebDriverManager.chromedriver().setup();
 
-        //WebDriver to use chrome browser
+        //WebDriverManager.firefoxdriver().setup();
+
+        //Define WebDriver to use chrome browser
         driver = new ChromeDriver();
 
+        //Define WebDriver to use firefox browser
+        //driver = new FirefoxDriver();
+
         //Launch Luma website
-        driver.get("http://demo-acm-2.bird.eu/");
+        driver.get("http://demo-magento2.vuestorefront.io/");
 
         //maximize browser window
         driver.manage().window().maximize();
+
+        //driver.manage().deleteAllCookies();
 
         //Click Sign in link
         //driver.findElement(By.linkText("Sign In")).click();
@@ -34,13 +46,24 @@ public class AccountLoginRegisteredCustomerSteps {
         homePagePO.clickSignIn();
 
 
+
     }
 
     @When("^user enter \"([^\"]*)\"$")
     public void userEnter(String Email) throws Throwable {
         //driver.findElement(By.id("email")).sendKeys(Email);
+
+        //Thread.sleep
+        //Thread.sleep(5000);
+
+        //implicit wait
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+
+
         LoginPagePO loginPagePO = new LoginPagePO(driver);
         loginPagePO.enterEmail(Email);
+
 
     }
 
