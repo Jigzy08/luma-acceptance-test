@@ -29,11 +29,11 @@ public class CreateAccountPagePO {
     @FindBy(css = "#form-validate > div > div.primary > button > span")
     public static WebElement CreateAccountButton;
 
-    //private WebDriverWait wait;
+    private WebDriverWait wait;
 
     //Initialize Elements using Selenium Webdriver
     public CreateAccountPagePO(WebDriver driver) {
-        //wait = new WebDriverWait(driver, 30);
+        wait = new WebDriverWait(driver, 30);
         PageFactory.initElements(driver, this); //initialise all element on page to use Webdriver
     }
 
@@ -41,7 +41,7 @@ public class CreateAccountPagePO {
 
 
     public void enterFirstName(String FirstName){
-        //wait.until(ExpectedConditions.visibilityOf(FirstNameField));
+        wait.until(ExpectedConditions.visibilityOf(FirstNameField));
         FirstNameField.sendKeys(FirstName); //parameterize method
     }
 
@@ -64,7 +64,7 @@ public class CreateAccountPagePO {
     }
 
     public void clickCreateAccount(){
-        //wait.until(ExpectedConditions.elementToBeClickable(CreateAccountButton));
+        wait.until(ExpectedConditions.elementToBeClickable(CreateAccountButton));
         CreateAccountButton.click();
     }
 
