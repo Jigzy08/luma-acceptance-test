@@ -1,23 +1,29 @@
 @OrderManagement @SmokeTest
 Feature: OrderManagement
 
+  Background:
+    Given user has launched Luma application successfully
+
 
   @AddProduct
   Scenario Outline: Add product to basket
-    Given user is on home page
-    And user move mouse over Women
-    And user moves mouse over Tops
-    And user click Jackets
+    When user moves mouse over Women and Tops and clicks Jackets
     And user clicks Juno Jacket
-    And user also click Small
-    And user then click Purple
-    And user enter "<Qty>"
-    Then user clicks Add to Cart
+    And user also click Small and click Purple
+    And user will also enter "<Qty>"
+    And user clicks Add to Cart
+    Then item is added to basket
 
 
     Examples:
     |Qty|
     |2  |
+
+    @DeleteItemFromCart
+    Scenario Outline: Delete item from Cart
+      When user click on cart and click on view and edit cart
+      And user click remove item button
+      Then item should be removed from cart
 
 
 

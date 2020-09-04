@@ -17,7 +17,7 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 6,
+  "line": 9,
   "name": "Add product to basket",
   "description": "",
   "id": "ordermanagement;add-product-to-basket",
@@ -25,30 +25,15 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 5,
+      "line": 8,
       "name": "@AddProduct"
     }
   ]
 });
 formatter.step({
-  "line": 7,
-  "name": "user is on home page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "user move mouse over Women",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 9,
-  "name": "user moves mouse over Tops",
-  "keyword": "And "
-});
-formatter.step({
   "line": 10,
-  "name": "user click Jackets",
-  "keyword": "And "
+  "name": "user moves mouse over Women and Tops and clicks Jackets",
+  "keyword": "When "
 });
 formatter.step({
   "line": 11,
@@ -57,22 +42,22 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "user also click Small",
+  "name": "user also click Small and click Purple",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "user then click Purple",
+  "name": "user will also enter \"\u003cQty\u003e\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 14,
-  "name": "user enter \"\u003cQty\u003e\"",
+  "name": "user clicks Add to Cart",
   "keyword": "And "
 });
 formatter.step({
   "line": 15,
-  "name": "user clicks Add to Cart",
+  "name": "item is added to basket",
   "keyword": "Then "
 });
 formatter.examples({
@@ -98,6 +83,25 @@ formatter.examples({
   ],
   "keyword": "Examples"
 });
+formatter.background({
+  "line": 4,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 5,
+  "name": "user has launched Luma application successfully",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "OrderManagementSteps.userHasLaunchedLumaApplicationSuccessfully()"
+});
+formatter.result({
+  "duration": 8473183900,
+  "status": "passed"
+});
 formatter.scenario({
   "line": 20,
   "name": "Add product to basket",
@@ -111,7 +115,7 @@ formatter.scenario({
       "name": "@OrderManagement"
     },
     {
-      "line": 5,
+      "line": 8,
       "name": "@AddProduct"
     },
     {
@@ -121,24 +125,9 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 7,
-  "name": "user is on home page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "user move mouse over Women",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 9,
-  "name": "user moves mouse over Tops",
-  "keyword": "And "
-});
-formatter.step({
   "line": 10,
-  "name": "user click Jackets",
-  "keyword": "And "
+  "name": "user moves mouse over Women and Tops and clicks Jackets",
+  "keyword": "When "
 });
 formatter.step({
   "line": 11,
@@ -147,89 +136,102 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "user also click Small",
+  "name": "user also click Small and click Purple",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "user then click Purple",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "user enter \"2\"",
+  "name": "user will also enter \"2\"",
   "matchedColumns": [
     0
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 14,
   "name": "user clicks Add to Cart",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "item is added to basket",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AddProductSteps.userIsOnHomePage()"
+  "location": "OrderManagementSteps.userMovesMouseOverWomenAndTopsAndClicksJackets()"
 });
 formatter.result({
-  "duration": 7561803300,
+  "duration": 3033127100,
   "status": "passed"
 });
 formatter.match({
-  "location": "AddProductSteps.userMoveMouseOverWomen()"
+  "location": "OrderManagementSteps.userClicksJunoJacket()"
 });
 formatter.result({
-  "duration": 176814200,
+  "duration": 508484400,
   "status": "passed"
 });
 formatter.match({
-  "location": "AddProductSteps.userMovesMouseOverTops()"
+  "location": "OrderManagementSteps.userAlsoClickSmallAndClickPurple()"
 });
 formatter.result({
-  "duration": 34365700,
-  "error_message": "org.openqa.selenium.JavascriptException: javascript error: Failed to execute \u0027elementsFromPoint\u0027 on \u0027Document\u0027: The provided double value is non-finite.\n  (Session info: chrome\u003d85.0.4183.83)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027JIGZY-PC\u0027, ip: \u0027192.168.137.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_262\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\sunmi\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 75fa6bc1768d5171b76f3a1a7795ef2e\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)\r\n\tat org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)\r\n\tat org.openqa.selenium.interactions.Actions.perform(Actions.java:595)\r\n\tat com.lamtech.luma.stepDefinition.AddProductSteps.userMovesMouseOverTops(AddProductSteps.java:52)\r\n\tat ✽.And user moves mouse over Tops(OrderManagement.feature:9)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "AddProductSteps.userClickJackets()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "AddProductSteps.userClicksJunoJacket()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "AddProductSteps.userAlsoClickSmall()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "AddProductSteps.userThenClickPurple()"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 980301800,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "2",
-      "offset": 12
+      "offset": 22
     }
   ],
-  "location": "AccountManagementSteps.userEnter(String)"
+  "location": "OrderManagementSteps.userWillAlsoEnter(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 141864401,
+  "status": "passed"
 });
 formatter.match({
-  "location": "AddProductSteps.userClicksAddToCart()"
+  "location": "OrderManagementSteps.userClicksAddToCart()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 77826101,
+  "status": "passed"
+});
+formatter.match({
+  "location": "OrderManagementSteps.itemIsAddedToBasket()"
+});
+formatter.result({
+  "duration": 43399,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 23,
+  "name": "Delete item from Cart",
+  "description": "",
+  "id": "ordermanagement;delete-item-from-cart",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 22,
+      "name": "@DeleteItemFromCart"
+    }
+  ]
+});
+formatter.step({
+  "line": 24,
+  "name": "user click on cart and click on view and edit cart",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "user click remove item button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 26,
+  "name": "item should be removed from cart",
+  "keyword": "Then "
 });
 });

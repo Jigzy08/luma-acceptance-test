@@ -16,8 +16,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AccountManagementSteps {
     WebDriver driver;
-    @Given("^user is on create account page$")
-    public void userIsOnCreateAccountPage() {
+
+    @Given("^Luma application is displayed successfully$")
+    public void lumaApplicationIsDisplayedSuccessfully() {
+
         //Define Browser
         WebDriverManager.chromedriver().setup();
         //WebDriverManager.firefoxdriver().setup();
@@ -34,30 +36,26 @@ public class AccountManagementSteps {
         //Maximize browser window
         driver.manage().window().maximize();
 
+
+    }
+
+    @When("^user is on create account page$")
+    public void userIsOnCreateAccountPage() {
+
         //Click Create An Account link
         //driver.findElement(By.linkText("Create an Account")).click();
         //Create instance of a class
+
         HomePagePO homePagePO = new HomePagePO(driver);
         homePagePO.clickCreateAccount();
 
     }
 
-    @When("^user enters \"([^\"]*)\"$")
-    public void userEnters(String FirstName) throws Throwable {
-        //driver.findElement(By.id("firstname")).sendKeys(FirstName);
-
-        //Thread.sleep
-        //Thread.sleep(10000);
+    @And("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userEntersAnd(String FirstName, String LastName) throws Throwable {
 
         CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
         createAccountPagePO.enterFirstName(FirstName);
-
-    }
-
-    @And("^user enters the \"([^\"]*)\"$")
-    public void userEntersThe(String LastName) throws Throwable {
-        //driver.findElement(By.id("lastname")).sendKeys(LastName);
-        CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
         createAccountPagePO.enterLastName(LastName);
 
     }
@@ -70,18 +68,11 @@ public class AccountManagementSteps {
 
     }
 
-    @And("^user will enter \"([^\"]*)\"$")
-    public void userWillEnter(String Password) throws Throwable {
-        //driver.findElement(By.id("password")).sendKeys(Password);
+    @And("^user will enter \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userWillEnterAnd(String Password, String ConfirmPassword) throws Throwable {
+
         CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
         createAccountPagePO.enterPassword(Password);
-
-    }
-
-    @And("^users also enter \"([^\"]*)\"$")
-    public void usersAlsoEnter(String ConfirmPassword) throws Throwable {
-        //driver.findElement(By.id("password-confirmation")).sendKeys(ConfirmPassword);
-        CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
         createAccountPagePO.enterConfirmPassword(ConfirmPassword);
 
     }
@@ -97,58 +88,21 @@ public class AccountManagementSteps {
     public void myDashboardScreenShouldBeDisplayed() {
     }
 
-    @Given("^user is on the sign in page$")
+    @When("^user is on the sign in page$")
     public void userIsOnTheSignInPage() {
-        //Define Browser
-        WebDriverManager.chromedriver().setup();
-
-        //WebDriverManager.firefoxdriver().setup();
-
-        //Define WebDriver to use chrome browser
-        driver = new ChromeDriver();
-
-        //Define WebDriver to use firefox browser
-        //driver = new FirefoxDriver();
-
-        //Launch Luma website
-        driver.get("http://demo-magento2.vuestorefront.io/");
-
-        //maximize browser window
-        driver.manage().window().maximize();
-
-        //driver.manage().deleteAllCookies();
 
         //Click Sign in link
         //driver.findElement(By.linkText("Sign In")).click();
         HomePagePO homePagePO = new HomePagePO(driver);
         homePagePO.clickSignIn();
 
-
-
     }
 
-    @When("^user enter \"([^\"]*)\"$")
-    public void userEnter(String Email) throws Throwable {
-        //driver.findElement(By.id("email")).sendKeys(Email);
-
-        //Thread.sleep
-        //Thread.sleep(5000);
-
-        //implicit wait
-        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-
+    @And("^user enter \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userEnterAnd(String Email, String Password) throws Throwable {
 
         LoginPagePO loginPagePO = new LoginPagePO(driver);
         loginPagePO.enterEmail(Email);
-
-
-    }
-
-    @And("^user also enter \"([^\"]*)\"$")
-    public void userAlsoEnter(String Password) throws Throwable {
-        //driver.findElement(By.id("pass")).sendKeys(Password);
-        LoginPagePO loginPagePO = new LoginPagePO(driver);
         loginPagePO.enterPassword(Password);
 
     }
@@ -164,5 +118,7 @@ public class AccountManagementSteps {
     @Then("^My Dashboard screen should display$")
     public void myDashboardScreenShouldDisplay() {
     }
+
+
 
 }

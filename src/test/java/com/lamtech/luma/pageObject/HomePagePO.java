@@ -15,6 +15,9 @@ public class HomePagePO {
     @FindBy(linkText = "Sign In")
     public  static WebElement SignInLink;
 
+    @FindBy(linkText = "minicart_content")
+    private static WebElement MiniCartButton;
+
     //Initialize Elements using Selenium Webdriver
     public HomePagePO(WebDriver driver) {
         PageFactory.initElements(driver, this); //initialise all element on page to use Webdriver
@@ -27,6 +30,10 @@ public class HomePagePO {
 
     public void clickSignIn(){
         SignInLink.click();
+    }
+
+    public void clickMiniCart(){
+        MiniCartButton.click();
     }
 
 

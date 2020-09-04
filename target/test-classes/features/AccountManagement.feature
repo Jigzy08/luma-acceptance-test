@@ -2,35 +2,36 @@
 Feature: Account Management
   This feature is for customer account creation and account login
 
+  Background:
+    Given Luma application is displayed successfully
+
+
 @createAccount @SanityTest
   Scenario Outline: Create an Account
-    Given user is on create account page
-    When user enters "<FirstName>"
-    And user enters the "<LastName>"
+    When user is on create account page
+    And user enters "<FirstName>" and "<LastName>"
     And user enters an "<Email>"
-    And user will enter "<Password>"
-    And users also enter "<ConfirmPassword>"
+    And user will enter "<Password>" and "<ConfirmPassword>"
     And user click on Create Account
     Then My Dashboard screen should be displayed
 
 
     Examples:
       | FirstName | LastName | Email               | Password  | ConfirmPassword |
-      | John      | Bodle    | johnbodle2@gmail.com | Testing@1 | Testing@1       |
+      | John      | Bodle    | johnbodle5@gmail.com | Testing@1 | Testing@1       |
 
 
 @logIn
   Scenario Outline: Account Login Registered Customer
-    Given user is on the sign in page
-    When user enter "<Email>"
-    And user also enter "<Password>"
+    When user is on the sign in page
+    And user enter "<Email>" and "<Password>"
     And user click Sign in
     Then My Dashboard screen should display
 
 
     Examples:
       | Email               | Password  |
-      | johnbodle2@gmail.com | Testing@1 |
+      | johnbodle5@gmail.com | Testing@1 |
 
 
 
