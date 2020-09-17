@@ -9,14 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ShoppingCartPagePO {
 
-    @FindBy(css = "#shopping-cart-table > tbody > tr.item-actions > td > div > a.action.action-delete > span")
+    @FindBy(css = "#shopping-cart-table > tbody > tr.item-actions > td > div > a.action.action-delete")
     private static WebElement RemoveItemButton;
 
     private WebDriverWait wait;
 
     //Initialize Elements using Selenium Webdriver
     public ShoppingCartPagePO(WebDriver driver) {
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 20);
         PageFactory.initElements(driver, this); //initialise all element on page to use Webdriver
     }
 

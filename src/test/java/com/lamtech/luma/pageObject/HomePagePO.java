@@ -15,7 +15,7 @@ public class HomePagePO {
     @FindBy(linkText = "Sign In")
     public  static WebElement SignInLink;
 
-    @FindBy(linkText = "minicart_content")
+    @FindBy(css = "body > div.page-wrapper > header > div.header.content > div.minicart-wrapper > a")
     private static WebElement MiniCartButton;
 
     //Initialize Elements using Selenium Webdriver

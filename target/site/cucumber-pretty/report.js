@@ -8,7 +8,7 @@ formatter.feature({
   "tags": [
     {
       "line": 1,
-      "name": "@OrderManagement"
+      "name": "@orderManagement"
     },
     {
       "line": 1,
@@ -17,71 +17,80 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 9,
-  "name": "Add product to basket",
+  "line": 23,
+  "name": "Delete item from cart",
   "description": "",
-  "id": "ordermanagement;add-product-to-basket",
+  "id": "ordermanagement;delete-item-from-cart",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 8,
-      "name": "@AddProduct"
+      "line": 22,
+      "name": "@deleteItem"
     }
   ]
 });
 formatter.step({
-  "line": 10,
+  "line": 24,
   "name": "user moves mouse over Women and Tops and clicks Jackets",
   "keyword": "When "
 });
 formatter.step({
-  "line": 11,
+  "line": 25,
   "name": "user clicks Juno Jacket",
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
+  "line": 26,
   "name": "user also click Small and click Purple",
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 27,
   "name": "user will also enter \"\u003cQty\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
+  "line": 28,
   "name": "user clicks Add to Cart",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
-  "name": "item is added to basket",
+  "line": 29,
+  "name": "user delete the item",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 30,
+  "name": "item should be removed from cart",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 18,
+  "line": 33,
   "name": "",
   "description": "",
-  "id": "ordermanagement;add-product-to-basket;",
+  "id": "ordermanagement;delete-item-from-cart;",
   "rows": [
     {
       "cells": [
         "Qty"
       ],
-      "line": 19,
-      "id": "ordermanagement;add-product-to-basket;;1"
+      "line": 34,
+      "id": "ordermanagement;delete-item-from-cart;;1"
     },
     {
       "cells": [
         "2"
       ],
-      "line": 20,
-      "id": "ordermanagement;add-product-to-basket;;2"
+      "line": 35,
+      "id": "ordermanagement;delete-item-from-cart;;2"
     }
   ],
   "keyword": "Examples"
+});
+formatter.before({
+  "duration": 7154938100,
+  "status": "passed"
 });
 formatter.background({
   "line": 4,
@@ -92,31 +101,31 @@ formatter.background({
 });
 formatter.step({
   "line": 5,
-  "name": "user has launched Luma application successfully",
+  "name": "Luma application is displayed successfully",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "OrderManagementSteps.userHasLaunchedLumaApplicationSuccessfully()"
+  "location": "AccountManagementSteps.lumaApplicationIsDisplayedSuccessfully()"
 });
 formatter.result({
-  "duration": 8473183900,
+  "duration": 184959600,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 20,
-  "name": "Add product to basket",
+  "line": 35,
+  "name": "Delete item from cart",
   "description": "",
-  "id": "ordermanagement;add-product-to-basket;;2",
+  "id": "ordermanagement;delete-item-from-cart;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 1,
-      "name": "@OrderManagement"
+      "name": "@orderManagement"
     },
     {
-      "line": 8,
-      "name": "@AddProduct"
+      "line": 22,
+      "name": "@deleteItem"
     },
     {
       "line": 1,
@@ -125,22 +134,22 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 10,
+  "line": 24,
   "name": "user moves mouse over Women and Tops and clicks Jackets",
   "keyword": "When "
 });
 formatter.step({
-  "line": 11,
+  "line": 25,
   "name": "user clicks Juno Jacket",
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
+  "line": 26,
   "name": "user also click Small and click Purple",
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 27,
   "name": "user will also enter \"2\"",
   "matchedColumns": [
     0
@@ -148,34 +157,39 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
+  "line": 28,
   "name": "user clicks Add to Cart",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
-  "name": "item is added to basket",
+  "line": 29,
+  "name": "user delete the item",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 30,
+  "name": "item should be removed from cart",
   "keyword": "Then "
 });
 formatter.match({
   "location": "OrderManagementSteps.userMovesMouseOverWomenAndTopsAndClicksJackets()"
 });
 formatter.result({
-  "duration": 3033127100,
+  "duration": 15900096200,
   "status": "passed"
 });
 formatter.match({
   "location": "OrderManagementSteps.userClicksJunoJacket()"
 });
 formatter.result({
-  "duration": 508484400,
+  "duration": 380738100,
   "status": "passed"
 });
 formatter.match({
   "location": "OrderManagementSteps.userAlsoClickSmallAndClickPurple()"
 });
 formatter.result({
-  "duration": 980301800,
+  "duration": 811608600,
   "status": "passed"
 });
 formatter.match({
@@ -188,50 +202,32 @@ formatter.match({
   "location": "OrderManagementSteps.userWillAlsoEnter(String)"
 });
 formatter.result({
-  "duration": 141864401,
+  "duration": 119816300,
   "status": "passed"
 });
 formatter.match({
   "location": "OrderManagementSteps.userClicksAddToCart()"
 });
 formatter.result({
-  "duration": 77826101,
+  "duration": 68546500,
   "status": "passed"
 });
 formatter.match({
-  "location": "OrderManagementSteps.itemIsAddedToBasket()"
+  "location": "OrderManagementSteps.userDeleteTheItem()"
 });
 formatter.result({
-  "duration": 43399,
+  "duration": 1826953100,
   "status": "passed"
 });
-formatter.scenarioOutline({
-  "line": 23,
-  "name": "Delete item from Cart",
-  "description": "",
-  "id": "ordermanagement;delete-item-from-cart",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 22,
-      "name": "@DeleteItemFromCart"
-    }
-  ]
+formatter.match({
+  "location": "OrderManagementSteps.itemShouldBeRemovedFromCart()"
 });
-formatter.step({
-  "line": 24,
-  "name": "user click on cart and click on view and edit cart",
-  "keyword": "When "
+formatter.result({
+  "duration": 22500,
+  "status": "passed"
 });
-formatter.step({
-  "line": 25,
-  "name": "user click remove item button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "item should be removed from cart",
-  "keyword": "Then "
+formatter.after({
+  "duration": 23200,
+  "status": "passed"
 });
 });
