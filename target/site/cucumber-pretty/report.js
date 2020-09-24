@@ -17,79 +17,74 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 23,
-  "name": "Delete item from cart",
+  "line": 9,
+  "name": "Add product to basket",
   "description": "",
-  "id": "ordermanagement;delete-item-from-cart",
+  "id": "ordermanagement;add-product-to-basket",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 22,
-      "name": "@deleteItem"
+      "line": 8,
+      "name": "@addProduct"
     }
   ]
 });
 formatter.step({
-  "line": 24,
+  "line": 10,
   "name": "user moves mouse over Women and Tops and clicks Jackets",
   "keyword": "When "
 });
 formatter.step({
-  "line": 25,
+  "line": 11,
   "name": "user clicks Juno Jacket",
   "keyword": "And "
 });
 formatter.step({
-  "line": 26,
+  "line": 12,
   "name": "user also click Small and click Purple",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
+  "line": 13,
   "name": "user will also enter \"\u003cQty\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 28,
+  "line": 14,
   "name": "user clicks Add to Cart",
   "keyword": "And "
 });
 formatter.step({
-  "line": 29,
-  "name": "user delete the item",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 30,
-  "name": "item should be removed from cart",
+  "line": 15,
+  "name": "item is added to basket",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 33,
+  "line": 18,
   "name": "",
   "description": "",
-  "id": "ordermanagement;delete-item-from-cart;",
+  "id": "ordermanagement;add-product-to-basket;",
   "rows": [
     {
       "cells": [
         "Qty"
       ],
-      "line": 34,
-      "id": "ordermanagement;delete-item-from-cart;;1"
+      "line": 19,
+      "id": "ordermanagement;add-product-to-basket;;1"
     },
     {
       "cells": [
         "2"
       ],
-      "line": 35,
-      "id": "ordermanagement;delete-item-from-cart;;2"
+      "line": 20,
+      "id": "ordermanagement;add-product-to-basket;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 7154938100,
+  "duration": 8165817900,
   "status": "passed"
 });
 formatter.background({
@@ -108,14 +103,14 @@ formatter.match({
   "location": "AccountManagementSteps.lumaApplicationIsDisplayedSuccessfully()"
 });
 formatter.result({
-  "duration": 184959600,
+  "duration": 442067000,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 35,
-  "name": "Delete item from cart",
+  "line": 20,
+  "name": "Add product to basket",
   "description": "",
-  "id": "ordermanagement;delete-item-from-cart;;2",
+  "id": "ordermanagement;add-product-to-basket;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
@@ -124,8 +119,8 @@ formatter.scenario({
       "name": "@orderManagement"
     },
     {
-      "line": 22,
-      "name": "@deleteItem"
+      "line": 8,
+      "name": "@addProduct"
     },
     {
       "line": 1,
@@ -134,22 +129,22 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 24,
+  "line": 10,
   "name": "user moves mouse over Women and Tops and clicks Jackets",
   "keyword": "When "
 });
 formatter.step({
-  "line": 25,
+  "line": 11,
   "name": "user clicks Juno Jacket",
   "keyword": "And "
 });
 formatter.step({
-  "line": 26,
+  "line": 12,
   "name": "user also click Small and click Purple",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
+  "line": 13,
   "name": "user will also enter \"2\"",
   "matchedColumns": [
     0
@@ -157,39 +152,34 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 28,
+  "line": 14,
   "name": "user clicks Add to Cart",
   "keyword": "And "
 });
 formatter.step({
-  "line": 29,
-  "name": "user delete the item",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 30,
-  "name": "item should be removed from cart",
+  "line": 15,
+  "name": "item is added to basket",
   "keyword": "Then "
 });
 formatter.match({
   "location": "OrderManagementSteps.userMovesMouseOverWomenAndTopsAndClicksJackets()"
 });
 formatter.result({
-  "duration": 15900096200,
+  "duration": 16305578500,
   "status": "passed"
 });
 formatter.match({
   "location": "OrderManagementSteps.userClicksJunoJacket()"
 });
 formatter.result({
-  "duration": 380738100,
+  "duration": 763154500,
   "status": "passed"
 });
 formatter.match({
   "location": "OrderManagementSteps.userAlsoClickSmallAndClickPurple()"
 });
 formatter.result({
-  "duration": 811608600,
+  "duration": 723319100,
   "status": "passed"
 });
 formatter.match({
@@ -202,32 +192,25 @@ formatter.match({
   "location": "OrderManagementSteps.userWillAlsoEnter(String)"
 });
 formatter.result({
-  "duration": 119816300,
+  "duration": 192836800,
   "status": "passed"
 });
 formatter.match({
   "location": "OrderManagementSteps.userClicksAddToCart()"
 });
 formatter.result({
-  "duration": 68546500,
+  "duration": 95494100,
   "status": "passed"
 });
 formatter.match({
-  "location": "OrderManagementSteps.userDeleteTheItem()"
+  "location": "OrderManagementSteps.itemIsAddedToBasket()"
 });
 formatter.result({
-  "duration": 1826953100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "OrderManagementSteps.itemShouldBeRemovedFromCart()"
-});
-formatter.result({
-  "duration": 22500,
+  "duration": 22400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 23200,
+  "duration": 796875400,
   "status": "passed"
 });
 });

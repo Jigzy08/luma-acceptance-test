@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = {"com.lamtech.luma.stepDefinition",
                 "com.lamtech.luma.cucumber",},
         format = {"pretty","html:target/site/cucumber-pretty"},
-        tags = {"@deleteItem"}
+        tags = {"@addProduct"}
 
 
 
